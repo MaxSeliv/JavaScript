@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+//№1 
+//Если честно я точно не понимаю, почему, но я понял что в случеае с переменной d, сначала ей присваивается значение переменной b и только после этого переменная b увеличивается на 1
+//Cначала подумал что дело в приоритете операторов, но постфикисный и префиксный инкремент хоть и имеют разные приоритеты, но всё равно выполняются до присваивания, 
+//так что точно сказать не могу почему так
+
+
+
+//№2
+// x=5, потому что действие a*=2 это просто умножение переменной a на 2
+
+
+//№5 
+function summ(a,b){
+    c= a+b;
+    return (c);
+}
+function diff(a,b){
+    c= a-b;
+    return (c);
+}
+function degr(a,b){
+    c= a/b;
+    return (c);
+}
+function multip(a,b){
+    c= a*b;
+    return (c);
+}
+
+
+
+//№3
+console.log('Задание 3');
+var a = 10, b = 4, c;
+if ((a >= 0) && (b >= 0)) {
+     c = a-b; 
+} else if ((a < 0) && (b < 0)) {
+     c = a*b;
+} else if (((a >= 0) && (b < 0)) || ((a < 0) && (b >= 0))) {
+    c = a+b;
+}
+console.log(c);
+
+console.log('Задание 4');
+
+//№4
+var a = 4;
+switch (a) {
+    case 1:
+    console.log(a++);
+    case 2:
+    console.log(a++);
+    case 3:
+    console.log(a++);
+    case 4:
+    console.log(a++);
+    case 5:
+    console.log(a++);
+    case 6:
+    console.log(a++);
+    case 7:
+    console.log(a++);
+    case 8:
+    console.log(a++);
+    case 9:
+    console.log(a++);
+    case 10:
+    console.log(a++);
+    case 11:
+    console.log(a++);
+    case 12:
+    console.log(a++);
+    case 13:
+    console.log(a++);
+    case 14:
+    console.log(a++);
+    case 15:
+    console.log(a);
+}
+
+
+//№6
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case 'summary': 
+        return (summ(arg1,arg2));
+        case 'difference': 
+        return (diff(arg1,arg2));
+        case 'degree': 
+        return (degr(arg1,arg2));
+        case 'multiplication': 
+        return (multip(arg1,arg2));
+    }
+}
+
+
+//№7
+// NULL используется как отсутствие какого-либо значения, т.е мы знаем что там кое-что должно быть, но этого нет
+//А 0 это и есть число 0, т.е. значение есть и оно равно 0
+
+
+//№8
+// function power(val,pow){
+//     if (pow > 0) {
+//         var val=val*val;
+//         pow = pow-1
+//         power(val,pow)
+// }
+// return(val); 
+// }
+// power(2,5);
+// console.log(val);
+
+</script>
+</body>
+</html>
