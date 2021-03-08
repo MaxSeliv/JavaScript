@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script>
+    
+
+    //№1  сделал с помощью массива, в который я каждый раз кладу простые числа. Проверка идёт делением числа на каждое простое число из массива. Если число не делится ни на одно просто число до него, то оно простое
+        var i = 3;
+        var primeNumb = [2];
+        loop:
+        while (i < 100) {
+            for (var j = 0; j < primeNumb.length; j++)
+            if (i % primeNumb[j] == 0){
+            i++;
+            continue loop;
+            }
+        primeNumb.push(i);
+        i++;
+        }
+        primeNumb.forEach(i => {
+        console.log(i);
+        });
+        
+        
+    //№2
+    const basket = [[ 300, 3],  [ 5000, 1],  ];
+    function priceBasket(basket) {
+    var price = 0;
+    for (var i = 0; i < basket.length; i++) {
+        price += basket[i][0] * basket[i][1];
+        }
+        return price;}
+    console.log(priceBasket(basket));
+
+
+    //№3
+    for (let i = 0; i < 10; console.log(i++)) {}
+
+
+    //№4
+    var arr = [];
+    var i = 0;
+    while (i < 20){
+        i++;
+        arr.push('x');
+        console.log(arr);
+    }
+</script>
+</body>
