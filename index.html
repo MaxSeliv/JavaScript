@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script>
+//№1 
+function objectNum(num) {
+if (num > 999 || num < 0  ) {
+    console.log('Значие не входит в диапозон от 0 до 999');
+    return {};
+} return {
+    hundreds: Math.floor(num / 100),
+    ten: Math.floor(num / 10) % 10,
+    one: num % 10,
+    };
+}
+console.log(objectNum(326));
+
+
+//№2
+function basketPrice() {
+    return basket.reduce((price, product) => price + product.price * product.count, 0);
+}
+const basket = [
+    {price:300,
+    count:3
+    },
+    {price:5000,
+    count:1
+    }
+]
+console.log(basketPrice());
+</script>
+</body>
